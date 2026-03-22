@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <p class="eyebrow">Projeto didatico com Flask + Fetch</p>
+            <h1>Catálogo de Jogos</h1>
+            <p class="subtitle">
+                Exemplo de front-end com HTML, CSS e JavaScript
+                consumindo dados JSON de um back-end Flask.
+            </p>
+        </div>
+        <nav class="main-nav" aria-label="Navegação principal">
+
+            <a href="#destaque">Destaque</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#contato">Contato</a>
+
+        </nav>
+    </header>
+
+    <main>
+        <section id="destaque" class="hero">
+            <div class="container hero grid">
+                <div>
+                    <span class="badge"> HTML + CSS + JS +Flask</span>
+                    <h2>Uma base simples para ensinar cliente, servidor e consumo de API</h2>
+                    <p>
+                        O front-end buscara os jogos com fetch('/api/games')
+                        e enviara o formulário para /api/contact.
+                    </p>
+                </div>
+                <div class="hero-panel">
+                    <h3>O que este exemplo mostra</h3>
+                    <ul>
+                        <li>Estrutura semantica com HTML</li>
+                        <li>Layout com Grid e Flexbox</li>
+                        <li>Manioulação de DOM e eventos</li>
+                        <li>Consumo e envio de JSON com Fetch API</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalogo" class="catalog-section">
+            <div class="container section-header">
+                <div>
+                    <p class="eyebrow">Catalogo</p>
+                    <h2>Jogos em destaque</h2>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="game-grid">
+                    <article class="game-card">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsYs90ANW8YLh_4Idx4Sa5WgGiYXEByLc2kuhqyoncQcPSd4HS1OVr4W1ApdyinodIkdDk83J-DWX-h8rtJp-aMnD0oTUR_yRld0gdFs2bHFyWP2ZrDA1RACvNJMs8qi6hw8s6Sw_IY9s0JXZlomHA9-I9Fi39skDWAp9NOB31HzsO_nLc7lh-KDNFs9g/w640-h360/resident-evil-requiem-pre-venda-desconto-pc-ps5.png"
+                            alt="Poster genérico filme">
+                        <div class="game-card-content">
+                            <h3>Resident Evil Requiem</h3>
+                            <p class="game-meta">Survival horror - 2026</p>
+                            <p>nesta fase, os cards ainda são estáticos.O conteudo sera dinamico na aula 05.</p>
+                        </div>
+
+                    </article>
+                    <article class="game-card">
+                        <img src="https://t.ctcdn.com.br/ILL69AH84MuklQSbs4Bj6zNDN3Q=/640x360/smart/i568317.jpeg"
+                            alt="Poster genérico filme">
+                        <div class="game-card-content">
+                            <h3>Cyberpunk 2077</h3>
+                            <p class="game-meta">RPG eletrônico - 2020</p>
+                            <p>nesta fase, os cards ainda são estáticos.O conteudo sera dinamico na aula 05.</p>
+                        </div>
+
+                    </article>
+                    <article class="game-card">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_90bo2cQLbmIGnvCSx_EiHnvf0amQipYWQF1mWVmykElOhLvnlZnXqQKAwc0d3ysP5aXUv1VFdvGNSgC6pww5emYfWMEnsE0zHy9Jioad4u5F0tE9TFLgbSw_L7oWOB3y8WMElHjA1C8k1_6ptsRACYS1sB6EC9E9DuJAxfurLHmG1Iuv-lJm3kCdjGja/w640-h360/The%20Last%20of%20Us%20Parte%20II%20remastered.png"
+                            alt="Poster genérico filme">
+                        <div class="game-card-content">
+                            <h3>The Last of Us Part II</h3>
+                            <p class="game-meta">Jogo eletrônico de ação e aventura - 2020</p>
+                            <p>nesta fase, os cards ainda são estáticos.O conteudo sera dinamico na aula 05.</p>
+                        </div>
+
+                    </article>
+                    <article class="game-card">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgK63f_Ne3KJamRZSpanK5wGuzLJlyIysC0btRQ8zuUDmlWHwvfNrP_UfUBSlt3mtdsLd0B-I9HRghgdGDafSBZZDLxNTpkHuW9-0xl6RSeTEDjaBvyEyY1dYJs7fOlukk4vX9ZQaFCtYlBrZ5ryIZrIviQP39pQy8PmU62xq6Jr646lY_P6JbPYznCCg/w640-h360/life-is-strange-arcadia-bay-collection.jpg"
+                            alt="Poster genérico filme">
+                        <div class="game-card-content">
+                            <h3>Life is Strange</h3>
+                            <p class="game-meta">Filme interativo - 2015</p>
+                            <p>nesta fase, os cards ainda são estáticos.O conteudo sera dinamico na aula 05.</p>
+                        </div>
+
+                    </article>
+                    <article class="game-card">
+                        <img src="https://cdn1.epicgames.com/columbine/offer/DETROIT_1-2560x1440-4fd6608a56880dc5d8e9d968517113c3.jpg"
+                            alt="Poster genérico filme">
+                        <div class="game-card-content">
+                            <h3>Detroit: Become Human</h3>
+                            <p class="game-meta">Jogo eletrônico de ação e aventura - 2018</p>
+                            <p>nesta fase, os cards ainda são estáticos.O conteudo sera dinamico na aula 05.</p>
+                        </div>
+
+                    </article>
+                    <article class="game-card">
+                        <img src="https://cdn-ext.fanatical.com/production/product/1280x720/ee2b504a-6f82-49ed-a3f5-3539b9b85fb9.jpeg"
+                            alt="Poster genérico filme">
+                        <div class="game-card-content">
+                            <h3>Resident Evil 2</h3>
+                            <p class="game-meta">Survival horror - 2019</p>
+                            <p>nesta fase, os cards ainda são estáticos.O conteudo sera dinamico na aula 05.</p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Projeto didatico de front-end com Flask e JSON</p>
+        </div>
+    </footer>
+</body>
+
+</html>
