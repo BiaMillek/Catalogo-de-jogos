@@ -4,21 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 2</title>
+    <title>Login Catálogo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="auth-body">
     <main class="auth-main">
-        <section class="auth-main">
+        <section class="auth-card">
             <div class="auth-copy">
                 <p class="eyebrow">Projeto didatico</p>
                 <h1>Login catalogo de jogos</h1>
-                <p>Exemplo simples de autenticação com Flask,sessão e usuário armazenados em arquivo JSON.</p>
+                <p>
+                   Interface inicial do projeto. Nesta etapa a tela ainda é estática, mas já usa a
+                estrutura visual que será reaproveitada quando o Flask entrar no projeto.
+                </p>
                 <ul class="auth-list">
-                    <li>Validades de usuário e senha no back-and</li>
-                    <li>Persistencia dos usuários em <code>data/users.json<code></li>
-                <li>Front-end consumindo<code>/api/login<code> com<code> fetch<code></code></li>
+                    <li>Layout em duas áreas</li>
+                    <li>Semântica e hierarquia visual</li>
+                    <li>Base pronto para validação com JavaScript</li>
                 </ul>
             </div>
 
@@ -33,7 +36,7 @@
                     <input type="password" placeholder="Digite a senha">
                 </label>
 
-                <button type="submit">Entrar</button>
+                <button class="button primary auth-button" type="submit">Entrar</button>
             </form>
         </section>
     </main>

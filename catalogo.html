@@ -1,141 +1,412 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogo</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catalogo</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
-    <header class="site-header">
-        <div class="container header-content">
-            <p class="eyebrow">Projeto didatico com Flask + Fetch</p>
-            <h1>Catálogo de Jogos</h1>
-            <p class="subtitle">
-                Exemplo de front-end com HTML, CSS e JavaScript
-                consumindo dados JSON de um back-end Flask.
-            </p>
-        </div>
-        <nav class="main-nav" aria-label="Navegação principal">
+    <body>
+        <header class="site-header">
+            <div class="container header-content">
+                <p class="eyebrow">Projeto didatico com Flask + Fetch</p>
+                <h1>Catálogo de Jogos</h1>
+                <p class="subtitle">
+                    Exemplo de front-end com HTML, CSS e JavaScript
+                    consumindo dados JSON de um back-end Flask.
+                </p>
+            </div>
+            <nav class="main-nav" aria-label="Navegação principal">
 
-            <a href="#destaque">Destaque</a>
-            <a href="#catalogo">Catálogo</a>
-            <a href="#contato">Contato</a>
+                <a href="#destaque">Destaque</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#contato">Contato</a>
 
-        </nav>
-    </header>
+            </nav>
+        </header>
 
-    <main>
-        <section id="destaque" class="hero">
-            <div class="container hero grid">
+        <main>
+            <section id="destaque" class="hero">
+                <div class="container hero grid">
+                    <div>
+                        <span class="badge"> MT1 - interface estática</span>
+                        <h2>Uma base moderna para evoluir nas próximas
+                            aulas</h2>
+                        <p>
+                            Nesta fase os filmes ainda estão escritos
+                            diretamente no HTML. O objetivo é consolidar
+                            a parte visual antes de entrar em DOM, eventos e
+                            consumo de API.
+
+                        </p>
+                        <!--TODO: Verificar a necessidade de ter esses botões no nav-bar e aqui-->
+
+                        <!--<div class="hero-actions">
+                            <a class="button primary" href="#catalogo">Ver
+                                catálogo</a>
+                            <a class="button secondary" href="contato">Ir para
+                                contato</a>
+                        </div>-->
+                    </div>
+
+                    <div class="hero-panel">
+                        <h3>O que esta páginajá mostra</h3>
+                        <ul>
+                            <li>Estrutura semantica com HTML</li>
+                            <li>Layout com Grid e Flexbox</li>
+                            <li>Cards de conteudo</li>
+                            <li>Interatividade basica</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="catalogo" class="catalog-section">
+                <div class="container section-header">
+                    <div>
+                        <p class="eyebrow">Catalogo</p>
+                        <h2>Jogos em destaque</h2>
+                    </div>
+                </div>
+                <!--Catalogo de jogos-->
+                <div class="container">
+                    <div class="game-grid">
+                        <article class="game-card">
+                            <img
+                                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsYs90ANW8YLh_4Idx4Sa5WgGiYXEByLc2kuhqyoncQcPSd4HS1OVr4W1ApdyinodIkdDk83J-DWX-h8rtJp-aMnD0oTUR_yRld0gdFs2bHFyWP2ZrDA1RACvNJMs8qi6hw8s6Sw_IY9s0JXZlomHA9-I9Fi39skDWAp9NOB31HzsO_nLc7lh-KDNFs9g/w640-h360/resident-evil-requiem-pre-venda-desconto-pc-ps5.png"
+                                alt="Poster genérico filme">
+                            <div class="game-card-content">
+                                <span class="tag">Survival horror</span>
+                                <h3>Resident Evil Requiem</h3>
+                                <div class="game-meta">
+                                    <span>Ano: 2026</span>
+                                    <span>Duração história principal: 12
+                                        horas</span>
+                                    <span>Nota metacritic:9.2</span>
+                                </div>
+                                <p class="game-description">
+                                    Um jogo de survival horror que marca uma
+                                    nova fase da franquia, trazendo a agente do
+                                    FBI Grace Ashcroft como protagonista ao lado
+                                    de Leon S. Kennedy. A narrativa se passa
+                                    após os eventos de Raccoon City, misturando
+                                    investigação, terror psicológico e ação
+                                    intensa. A gameplay alterna entre momentos
+                                    de sobrevivência mais tensos e limitados em
+                                    recursos, e sequências mais focadas em
+                                    combate, criando um equilíbrio entre horror
+                                    clássico e ação moderna, com forte atmosfera
+                                    e narrativa envolvente.
+                                </p>
+                                <button class="button primary" type="button">Ver
+                                    detalhes</button>
+                            </div>
+                        </article>
+                        <article class="game-card">
+                            <img
+                                src="https://t.ctcdn.com.br/ILL69AH84MuklQSbs4Bj6zNDN3Q=/640x360/smart/i568317.jpeg"
+                                alt="Poster genérico filme">
+                            <div class="game-card-content">
+                                <span class="tag">RPG eletrônico</span>
+                                <h3>Cyberpunk 2077</h3>
+                                <div class="game-meta">
+                                    <span>Ano: 2020</span>
+                                    <span>Duração história principal: 26
+                                        horas</span>
+                                    <span>Nota metacritic: 8.6</span>
+                                </div>
+                                <p class="game-description">
+                                    Um RPG de ação em mundo aberto ambientado em
+                                    Night City, uma metrópole futurista dominada
+                                    por tecnologia avançada, megacorporações e
+                                    implantes cibernéticos. O jogador assume o
+                                    papel de V, um mercenário em busca de
+                                    ascensão, dinheiro e sobrevivência, enquanto
+                                    lida com uma ameaça que pode mudar sua
+                                    própria mente. A gameplay mistura combate
+                                    armado, hacking, furtividade e exploração
+                                    livre, com decisões que impactam a narrativa
+                                    e múltiplos finais.
+                                </p>
+                                <button class="button primary" type="button">Ver
+                                    detalhes</button>
+                            </div>
+                        </article>
+                        <article class="game-card">
+                            <img
+                                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_90bo2cQLbmIGnvCSx_EiHnvf0amQipYWQF1mWVmykElOhLvnlZnXqQKAwc0d3ysP5aXUv1VFdvGNSgC6pww5emYfWMEnsE0zHy9Jioad4u5F0tE9TFLgbSw_L7oWOB3y8WMElHjA1C8k1_6ptsRACYS1sB6EC9E9DuJAxfurLHmG1Iuv-lJm3kCdjGja/w640-h360/The%20Last%20of%20Us%20Parte%20II%20remastered.png"
+                                alt="Poster genérico filme">
+                            <div class="game-card-content">
+                                <span class="tag">Filme interatio</span>
+                                <h3>The Last of Us Part II Remastered</h3>
+                                <div class="game-meta">
+                                    <span>Ano: 2024</span>
+                                    <span>Duração história principal: 25
+                                        horas</span>
+                                    <span>Nota metacritic:9.0</span>
+                                </div>
+                                <p class="game-description">
+                                    Um jogo de ação e aventura com forte foco
+                                    narrativo, que acompanha Ellie em uma
+                                    jornada intensa de vingança em um mundo
+                                    pós-apocalíptico dominado por infectados e
+                                    facções hostis. A gameplay mistura
+                                    exploração, furtividade e combates brutais,
+                                    enquanto a história se aprofunda em temas
+                                    como perda, moralidade e consequências das
+                                    escolhas, oferecendo personagens complexos e
+                                    momentos emocionais marcantes ao longo da
+                                    campanha.
+                                </p>
+                                <button class="button primary" type="button">Ver
+                                    detalhes</button>
+                            </div>
+                        </article>
+                        <article class="game-card">
+                            <img
+                                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgK63f_Ne3KJamRZSpanK5wGuzLJlyIysC0btRQ8zuUDmlWHwvfNrP_UfUBSlt3mtdsLd0B-I9HRghgdGDafSBZZDLxNTpkHuW9-0xl6RSeTEDjaBvyEyY1dYJs7fOlukk4vX9ZQaFCtYlBrZ5ryIZrIviQP39pQy8PmU62xq6Jr646lY_P6JbPYznCCg/w640-h360/life-is-strange-arcadia-bay-collection.jpg"
+                                alt="Poster genérico filme">
+                            <div class="game-card-content">
+                                <span class="tag">Aventura narrativa /
+                                    Escolhas</span>
+                                <h3>Life is Strange</h3>
+                                <div class="game-meta">
+                                    <span>Ano: 2015</span>
+                                    <span>Duração história principal: 14
+                                        horas</span>
+                                    <span>Nota metacritic: 8.5</span>
+                                </div>
+                                <p class="game-description">
+                                    Um jogo de aventura episódico focado em
+                                    narrativa, que acompanha Max Caulfield, uma
+                                    estudante de fotografia que descobre a
+                                    habilidade de voltar no tempo. Ao lado de
+                                    sua amiga Chloe, ela investiga o
+                                    desaparecimento de uma colega enquanto tenta
+                                    lidar com as consequências de alterar
+                                    eventos passados. A gameplay é baseada em
+                                    escolhas e diálogos que afetam diretamente o
+                                    rumo da história, explorando temas como
+                                    amizade, destino e responsabilidade, com uma
+                                    atmosfera emocional marcante e trilha sonora
+                                    envolvente.
+                                </p>
+                                <button class="button primary" type="button">Ver
+                                    detalhes</button>
+                            </div>
+                        </article>
+                        <article class="game-card">
+                            <img
+                                src="https://cdn1.epicgames.com/columbine/offer/DETROIT_1-2560x1440-4fd6608a56880dc5d8e9d968517113c3.jpg"
+                                alt="Poster genérico filme">
+                            <div class="game-card-content">
+                                <span class="tag">Aventura narrativa / Drama
+                                    interativo</span>
+                                <h3>Detroit: Become Human</h3>
+                                <div class="game-meta">
+                                    <span>Ano: 2018</span>
+                                    <span>Duração história principal: 12
+                                        horas</span>
+                                    <span>Nota metacritic: 7.8</span>
+                                </div>
+                                <p class="game-description">
+                                    Um jogo focado em narrativa interativa
+                                    ambientado em um futuro onde androides
+                                    convivem com humanos, acompanhando três
+                                    personagens com histórias interligadas que
+                                    exploram temas como consciência, liberdade e
+                                    preconceito. O jogador toma decisões
+                                    constantes que afetam profundamente o rumo
+                                    da trama, levando a múltiplos caminhos e
+                                    finais diferentes. A gameplay é baseada em
+                                    escolhas, exploração e eventos de ação
+                                    rápida, criando uma experiência
+                                    cinematográfica com forte impacto emocional.
+                                </p>
+                                <button class="button primary" type="button">Ver
+                                    detalhes</button>
+                            </div>
+                        </article>
+                        <article class="game-card">
+                            <img
+                                src="https://cdn-ext.fanatical.com/production/product/1280x720/ee2b504a-6f82-49ed-a3f5-3539b9b85fb9.jpeg"
+                                alt="Poster genérico filme">
+                            <div class="game-card-content">
+                                <span class="tag">Survival horror</span>
+                                <h3>Resident Evil 2</h3>
+                                <div class="game-meta">
+                                    <span>Ano: 2019</span>
+                                    <span>Duração história principal: 8
+                                        horas</span>
+                                    <span>Nota metacritic: 9.1</span>
+                                </div>
+                                <p class="game-description">
+                                    Um remake moderno do clássico de survival
+                                    horror, que acompanha Leon S. Kennedy e
+                                    Claire Redfield durante o surto zumbi em
+                                    Raccoon City. O jogo combina exploração
+                                    tensa, gerenciamento de recursos limitados e
+                                    resolução de puzzles, enquanto o jogador
+                                    enfrenta criaturas aterrorizantes em
+                                    ambientes claustrofóbicos. Com câmera sobre
+                                    o ombro e gráficos atualizados, a
+                                    experiência reforça o clima de suspense
+                                    constante, oferecendo uma narrativa
+                                    envolvente e momentos de grande tensão ao
+                                    longo da campanha.
+                                </p>
+                                <button class="button primary" type="button">Ver
+                                    detalhes</button>
+                            </div>
+                        </article>
+                        <article class="game-card">
+                            <img
+                                src="https://cdn1.epicgames.com/spt-assets/1dbe1908183242849c2aac9bb3f50541/lost-records-bloom-and-rage-fgi6c.jpg"
+                                alt="Poster genérico filme">
+                            <div class="game-card-content">
+                                <span class="tag">Aventura narrativa / Drama
+                                    interativo</span>
+                                <h3>Lost Records: Bloom & Rage</h3>
+                                <div class="game-meta">
+                                    <span>Ano: 2025</span>
+                                    <span>Duração história principal: 12
+                                        horas</span>
+                                    <span>Nota metacritic: 7.4</span>
+                                </div>
+                                <p class="game-description">
+                                    Um jogo de aventura narrativa focado em
+                                    escolhas, desenvolvido pela DON'T NOD, que
+                                    acompanha um grupo de quatro amigas durante
+                                    um verão marcante nos anos 90 e suas
+                                    consequências décadas depois. A história
+                                    alterna entre 1995 e o presente, explorando
+                                    segredos, memórias e um evento misterioso
+                                    que mudou suas vidas para sempre. A gameplay
+                                    envolve exploração, diálogos e decisões que
+                                    impactam relações e desfechos, com forte
+                                    carga emocional, foco no desenvolvimento dos
+                                    personagens e uma atmosfera nostálgica
+                                    marcada por elementos sobrenaturais e
+                                    cinematográficos.
+                                </p>
+                                <button class="button primary" type="button">Ver
+                                    detalhes</button>
+                            </div>
+                        </article>
+                        <article class="game-card">
+                            <img
+                                src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2624870/df22658da4ac9d886986cd3d9bd1d5aeee03c915/capsule_616x353.jpg?t=1774610978"
+                                alt="Poster genérico filme">
+                            <div class="game-card-content">
+                                <span class="tag">Aventura narrativa / Drama
+                                    interativo</span>
+                                <h3>Life is Strange: Reunion</h3>
+                                <div class="game-meta">
+                                    <span>Ano: 2026</span>
+                                    <span>Duração história principal: 12
+                                        horas</span>
+                                    <span>Nota metacritic: Ainda não
+                                        consolidada</span>
+                                </div>
+                                <p class="game-description">
+                                    Um jogo de aventura narrativa que marca o
+                                    retorno de Max Caulfield e Chloe Price,
+                                    servindo como continuação direta de Life is
+                                    Strange: Double Exposure. A história se
+                                    passa na Universidade de Caledon, onde um
+                                    incêndio catastrófico ameaça destruir tudo
+                                    em poucos dias, levando Max a usar novamente
+                                    seu poder de voltar no tempo para tentar
+                                    evitar a tragédia. A gameplay alterna entre
+                                    os dois personagens, combinando manipulação
+                                    temporal, diálogos e escolhas que
+                                    influenciam o desenrolar da trama, enquanto
+                                    explora temas como consequências, memória e
+                                    destino em uma narrativa emocional e
+                                    cinematográfica.
+                                </p>
+                                <button class="button primary" type="button">Ver
+                                    detalhes</button>
+                            </div>
+                        </article>
+                        <article class="game-card">
+                            <img
+                                src="https://cdn1.epicgames.com/offer/e97659b501af4e3981d5430dad170911/EGS_HogwartsLegacy_AvalancheSoftware_S1_2560x1440-aa80981dd7c9b3f26b12606974a76dba_2560x1440-aa80981dd7c9b3f26b12606974a76dba"
+                                alt="Poster genérico filme">
+                            <div class="game-card-content">
+                                <span class="tag">RPG de ação / Mundo
+                                    aberto</span>
+                                <h3>Hogwarts Legacy</h3>
+                                <div class="game-meta">
+                                    <span>Ano: 2023</span>
+                                    <span>Duração história principal: 25
+                                        horas</span>
+                                    <span>Nota metacritic: 8.4</span>
+                                </div>
+                                <p class="game-description">
+                                    Um RPG de ação em mundo aberto ambientado no
+                                    universo de Harry Potter, que se passa cerca
+                                    de um século antes dos eventos dos livros. O
+                                    jogador assume o papel de um estudante de
+                                    Hogwarts com a habilidade rara de manipular
+                                    magia antiga, explorando a escola, Hogsmeade
+                                    e regiões ao redor enquanto aprende
+                                    feitiços, enfrenta criaturas e descobre
+                                    segredos ocultos. A gameplay combina
+                                    exploração livre, combate mágico dinâmico e
+                                    missões variadas, além de permitir
+                                    personalização do personagem e escolhas ao
+                                    longo da jornada, criando uma experiência
+                                    imersiva e fiel ao universo bruxo.
+                                </p>
+                                <button class="button primary" type="button">Ver
+                                    detalhes</button>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+        <section id="contato" class="contact-section">
+            <div class="container contact-grid">
                 <div>
-                    <span class="badge"> HTML + CSS + JS +Flask</span>
-                    <h2>Uma base simples para ensinar cliente, servidor e consumo de API</h2>
+                    <p class="eyebrow">Contato</p>
+                    <h2>Seção preparada para as próximas aulas</h2>
                     <p>
-                        O front-end buscara os jogos com fetch('/api/games')
-                        e enviara o formulário para /api/contact.
+                        No momento, este formulário é apenas visual. Nas aulas
+                        seguintes ele será validado com JavaScript e enviado ao
+                        servidor com Fetch API.
                     </p>
                 </div>
-                <div class="hero-panel">
-                    <h3>O que este exemplo mostra</h3>
-                    <ul>
-                        <li>Estrutura semantica com HTML</li>
-                        <li>Layout com Grid e Flexbox</li>
-                        <li>Manioulação de DOM e eventos</li>
-                        <li>Consumo e envio de JSON com Fetch API</li>
-                    </ul>
-                </div>
+
+                <form class="contact-form">
+                    <label>
+                        <span>Nome</span>
+                        <input type="text" placeholder="Digite seu nome">
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" placeholder="Digite seu email">
+                    </label>
+                    <label>
+                        <span>Mensagem</span>
+                        <textarea placeholder="Digite sua mensagem"></textarea>
+                    </label>
+
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
             </div>
         </section>
-
-        <section id="catalogo" class="catalog-section">
-            <div class="container section-header">
-                <div>
-                    <p class="eyebrow">Catalogo</p>
-                    <h2>Jogos em destaque</h2>
-                </div>
+        <footer class="site-footer">
+            <div class="container footer-content">
+                <p>Projeto didatico de front-end com Flask e JSON</p>
             </div>
-
-            <div class="container">
-                <div class="game-grid">
-                    <article class="game-card">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsYs90ANW8YLh_4Idx4Sa5WgGiYXEByLc2kuhqyoncQcPSd4HS1OVr4W1ApdyinodIkdDk83J-DWX-h8rtJp-aMnD0oTUR_yRld0gdFs2bHFyWP2ZrDA1RACvNJMs8qi6hw8s6Sw_IY9s0JXZlomHA9-I9Fi39skDWAp9NOB31HzsO_nLc7lh-KDNFs9g/w640-h360/resident-evil-requiem-pre-venda-desconto-pc-ps5.png"
-                            alt="Poster genérico filme">
-                        <div class="game-card-content">
-                            <h3>Resident Evil Requiem</h3>
-                            <p class="game-meta">Survival horror - 2026</p>
-                            <p>nesta fase, os cards ainda são estáticos.O conteudo sera dinamico na aula 05.</p>
-                        </div>
-
-                    </article>
-                    <article class="game-card">
-                        <img src="https://t.ctcdn.com.br/ILL69AH84MuklQSbs4Bj6zNDN3Q=/640x360/smart/i568317.jpeg"
-                            alt="Poster genérico filme">
-                        <div class="game-card-content">
-                            <h3>Cyberpunk 2077</h3>
-                            <p class="game-meta">RPG eletrônico - 2020</p>
-                            <p>nesta fase, os cards ainda são estáticos.O conteudo sera dinamico na aula 05.</p>
-                        </div>
-
-                    </article>
-                    <article class="game-card">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_90bo2cQLbmIGnvCSx_EiHnvf0amQipYWQF1mWVmykElOhLvnlZnXqQKAwc0d3ysP5aXUv1VFdvGNSgC6pww5emYfWMEnsE0zHy9Jioad4u5F0tE9TFLgbSw_L7oWOB3y8WMElHjA1C8k1_6ptsRACYS1sB6EC9E9DuJAxfurLHmG1Iuv-lJm3kCdjGja/w640-h360/The%20Last%20of%20Us%20Parte%20II%20remastered.png"
-                            alt="Poster genérico filme">
-                        <div class="game-card-content">
-                            <h3>The Last of Us Part II</h3>
-                            <p class="game-meta">Jogo eletrônico de ação e aventura - 2020</p>
-                            <p>nesta fase, os cards ainda são estáticos.O conteudo sera dinamico na aula 05.</p>
-                        </div>
-
-                    </article>
-                    <article class="game-card">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgK63f_Ne3KJamRZSpanK5wGuzLJlyIysC0btRQ8zuUDmlWHwvfNrP_UfUBSlt3mtdsLd0B-I9HRghgdGDafSBZZDLxNTpkHuW9-0xl6RSeTEDjaBvyEyY1dYJs7fOlukk4vX9ZQaFCtYlBrZ5ryIZrIviQP39pQy8PmU62xq6Jr646lY_P6JbPYznCCg/w640-h360/life-is-strange-arcadia-bay-collection.jpg"
-                            alt="Poster genérico filme">
-                        <div class="game-card-content">
-                            <h3>Life is Strange</h3>
-                            <p class="game-meta">Filme interativo - 2015</p>
-                            <p>nesta fase, os cards ainda são estáticos.O conteudo sera dinamico na aula 05.</p>
-                        </div>
-
-                    </article>
-                    <article class="game-card">
-                        <img src="https://cdn1.epicgames.com/columbine/offer/DETROIT_1-2560x1440-4fd6608a56880dc5d8e9d968517113c3.jpg"
-                            alt="Poster genérico filme">
-                        <div class="game-card-content">
-                            <h3>Detroit: Become Human</h3>
-                            <p class="game-meta">Jogo eletrônico de ação e aventura - 2018</p>
-                            <p>nesta fase, os cards ainda são estáticos.O conteudo sera dinamico na aula 05.</p>
-                        </div>
-
-                    </article>
-                    <article class="game-card">
-                        <img src="https://cdn-ext.fanatical.com/production/product/1280x720/ee2b504a-6f82-49ed-a3f5-3539b9b85fb9.jpeg"
-                            alt="Poster genérico filme">
-                        <div class="game-card-content">
-                            <h3>Resident Evil 2</h3>
-                            <p class="game-meta">Survival horror - 2019</p>
-                            <p>nesta fase, os cards ainda são estáticos.O conteudo sera dinamico na aula 05.</p>
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-
-            </div>
-
-
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-content">
-            <p>Projeto didatico de front-end com Flask e JSON</p>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 
 </html>
