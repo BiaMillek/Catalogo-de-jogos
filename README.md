@@ -1,2 +1,2 @@
 # Catalogo-de-jogos
-Catago com sistema de login com autenticação Flask
+Catalogo com sistema de login com autenticação Flask
