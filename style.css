@@ -9,7 +9,7 @@
     --line: #dbe3ee;
     --primary: #103b76;
     --primary-dark: #1d4ed8;
-    --shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
+    --shadow: 0 18px 50px rgba(11, 25, 56, 0.537);
     --radius: 18px;
 }
 
@@ -19,6 +19,7 @@
 
 /*Tela de Login*/
 body {
+    
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(135deg, #020617, #0f172a);
@@ -54,7 +55,8 @@ a {
 
 .auth-body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #0b1430, #172554);
+    background: linear-gradient(135deg, #010719, #0a194b);
+    
 
 }
 
@@ -76,15 +78,16 @@ a {
 .auth-copy,
 .auth-form {
     background: var(--panel);
-    border: 1px solid rgba(148, 163, 184, 00.15rem);
+    border: 1px solid rgba(148, 163, 184, 0.15rem);
     border-radius: var(--radius);
-    box-shadow: var(--shadow);
     padding: 2rem;
 }
 
 .auth-copy {
-    background: linear-gradient(135deg, var(--bg), #172554);
+    
+    background: linear-gradient(135deg, #0a122c92, #0a1a4e);
     color: var(--text-light);
+    
 }
 
 .auth-button {
@@ -99,9 +102,10 @@ a {
 
 /*Fomulário de Login*/
 .auth-form {
-    background: linear-gradient(135deg, #172554, #0b1430);
+    background: linear-gradient(135deg, #101c47, #0e1c4861);
     display: grid;
     gap: 1rem;
+    
 }
 
 .auth-form label {
@@ -112,10 +116,10 @@ a {
 }
 
 .auth-form input {
-    background: #24315b;
+    box-shadow: 0 0 10px rgba(7, 17, 49, 0.5);
+    background: #233368;
     padding: 0.85rem 1rem;
     border-radius: 12px;
-    border: 1px solid #24315b;
     font: inherit;
 }
 
@@ -189,6 +193,7 @@ button,
     grid-template-columns: 2fr 1fr;
     gap: 1.5rem;
     align-items: stretch;
+    
 }
 
 .badge {
@@ -199,6 +204,7 @@ button,
     padding: 0.35rem 0.75rem;
     border-radius: 999px;
     font-weight: 700;
+    
 }
 
 /*Containers do Catalogo*/
@@ -207,10 +213,8 @@ button,
 .game-card,
 .auth-copy,
 .auth-form {
-    background: var(--panel);
-    border: 1px solid rgba(148, 163, 184, 0.15);
     border-radius: var(--radius);
-    box-shadow: var(--shadow);
+    box-shadow: 0 0 20px rgb(25, 34, 63);
 }
 
 .hero-panel,
@@ -229,6 +233,7 @@ button,
 }
 .catalog-section {
     padding: 2rem 0 3rem;
+    
 }
 
 .section-header {
@@ -257,7 +262,7 @@ button,
 
 .game-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 25px 60px rgba(255, 255, 255, 0.078);
     background: var(--panel-hover);
 }
 
@@ -296,9 +301,53 @@ button,
     color: var(--text-light);
 }
 
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container {
+    width: min(1120px, calc(100% - 2rem));
+    margin: 0 auto;
+}
 .site-footer {
-    padding: 1.25rem 0 2rem;
+    padding: 1.5rem 0;
     color: var(--muted);
+    background-color:linear-gradient(135deg, #0a122c92, #0a1a4e);
+    display: flex;
+    justify-content: space-between; /* separa esquerda e direita */
+    align-items: center;            /* alinha verticalmente */
+    flex-wrap: wrap;                /* quebra no mobile */
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.footer-content h2 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.footer-content p {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.icons {
+    display: flex;
+    gap: 0.5rem;
+}
+.icons img {
+    width: 50px;
+    height: 50px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.icons img:hover {
+    opacity: 1;
+    transform: scale(1.1);
 }
 /*Contato e formulário*/
 
@@ -306,16 +355,22 @@ button,
 .auth-form{
     display: flex;
     flex-direction: column;
-    gap: 0.45rem;
-    font-weight: 700;
+    gap: 0.6rem;
+
+    background: linear-gradient(135deg, var(--panel), #040d2c);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 .contact-form input,
 .contact-form textarea,
 .auth-form input {
+    background-color: #1e2847;
     width: 100%;
     padding: 0.85rem 2rem;
     border-radius: 12px;
-    border: 1px solid var(--line);
+    border: 1px solid var(--shadow);
     font: inherit;
 }
 
@@ -331,4 +386,13 @@ button,
         flex-direction: column;
         align-items: start;
     }
+}
+@media (max-width: 720px) {
+    .main-nav,
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
 }
