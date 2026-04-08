@@ -1,1 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <p class="eyebrow">JavaScript no Front-End I</p>
+        <h1>Catálogo de Jogos</h1>
+        <p class="subtitle">
+          Agora os cards serão montados dinamicamente com JavaScript.
+        </p>
+      
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#destaque">Destaque</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="destaque" class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="badge">MT2 - parte 1</span>
+            <h2>O HTML deixa de carregar os filmes manualmente</h2>
+            <p>
+              Nesta etapa a grade do HTML fica vazia no  HTML e passa a ser preenchida por uma função no JavaScript.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#catalogo">Ver catálogo</a>
+              <a class="button secondary" href="#contato">Ir para contato</a>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <h3>Conceito da aula</h3>
+            <ul>
+              <li>Arrays de objetos</li>
+              <li>Funções </li>
+              <li>for.....of</li>
+              <li>Manipulação inicial do DOM</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalogo" class="catalog-section">
+        <div class="container section-header">
+          <div>
+            <p class="eyebrow">Catalogo</p>
+            <h2>Jogos em destaque</h2>
+          </div>
+        </div>
+        <!--Catalogo de jogos-->
+        <div class="container filters">
+          <label>
+            <span>Buscar</span>
+            <input type="text" id="searchInput" placeholder="Digite o título do gênero">
+          </label>
+          <label>
+            <span>Gênero</span>
+            <select id="genreSelect">
+              <option value="">Todos</option>
+            </select>
+          </label>
+        </div>
+        <div class="container">
+          <p id="statusMessage" class="status-message">Carregando Filmes.....</p>
+          <div id="gameGrid" class="game-grid"></div>
+        </div>
+      </section>
+    </main>
+    <section id="contato" class="contact-section">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contato</p>
+          <h2>Seção preparada para as próximas aulas</h2>
+          <p>
+            No momento, este formulário é apenas visual. Nas aulas seguintes ele
+            será validado com JavaScript e enviado ao servidor com Fetch API.
+          </p>
+        </div>
+
+        <form class="contact-form">
+          <label>
+            <span>Nome</span>
+            <input type="text" placeholder="Digite seu nome" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" placeholder="Digite seu email" />
+          </label>
+          <label>
+            <span>Mensagem</span>
+            <textarea rows="5" placeholder="Digite sua mensagem"></textarea>
+          </label>
+
+          <button type="submit" class="button primary">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="container footer-wrapper">
+        <div class="footer-content">
+          <h2>Projeto feito por Bianca Mazepa Millek</h2>
+          <p>Projeto didatico de front-end com Flask e JSON</p>
+        </div>
+
+        <div class="icons">
+          <a href="https://github.com/BiaMillek">
+            <img src="img/Github.png" alt="Github" />
+          </a>
+          <a href="https://www.linkedin.com/in/bianca-millek-b00a023a3">
+            <img src="img/Linkedin.png" alt="Linkedin" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
