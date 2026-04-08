@@ -15,32 +15,33 @@
                 <p class="eyebrow">Projeto didatico</p>
                 <h1>Login catalogo de jogos</h1>
                 <p>
-                   Interface inicial do projeto. Nesta etapa a tela ainda é estática, mas já usa a
-                estrutura visual que será reaproveitada quando o Flask entrar no projeto.
-                </p>
+                   Agora a tela já está pronta para uma validação com JavaScript.
                 <ul class="auth-list">
-                    <li>Layout em duas áreas</li>
-                    <li>Semântica e hierarquia visual</li>
-                    <li>Base pronto para validação com JavaScript</li>
+                    <li>Validação Front-End dos campos</li>
+                    <li>Feedback visual de erro</li>
+                    <li>Base pronta para integração com o Flask</li>
                 </ul>
             </div>
 
-            <form class="auth-form">
+            <form id="loginForm" class="auth-form" novalidade>
                 <label>
                     <span>Usuário</span>
-                    <input type="text" placeholder="Digite usuário">
+                    <input type="text" id="username" name="username" placeholder="Digite usuário">
+                    <small class="fiel-error" id="usernameErro"></small>
                 </label>
 
                 <label>
                     <span>Senha</span>
-                    <input type="password" placeholder="Digite a senha">
+                    <input type="password" id="password" name="password" placeholder="Digite a senha">
+                    <small class="field-error" id="passwordError"></small>
                 </label>
 
                 <button class="button primary auth-button" type="submit">Entrar</button>
+                <p id="loginFeedback" class="form-feedback"></p>
             </form>
         </section>
     </main>
-
+    <script src="login.js"></script>
 </body>
 
 </html>
